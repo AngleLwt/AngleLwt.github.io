@@ -112,5 +112,9 @@ service-worker: true
 #         href: "https://developer.apple.com/"
 #     }
 # ]
+# Code Highlight theme
+# Available value: normal | night | night eighties | night blue | night bright
+# https://github.com/chriskempson/tomorrow-theme
+highlight_theme: normal
 
 theme: jekyll-theme-cayman
