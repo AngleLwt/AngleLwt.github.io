@@ -94,13 +94,11 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
-highlight:
-enable: true
-line_number: true
-auto_detect: false
-tab_replace: ''
-wrap: true
-hljs: true
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 
 # # Friends
