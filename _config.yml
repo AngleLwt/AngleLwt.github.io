@@ -94,6 +94,13 @@ featured-condition-size: 1              # 相同标签数量大于这个数，�
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
+highlight:
+enable: true
+line_number: true
+auto_detect: false
+tab_replace: ''
+wrap: true
+hljs: true
 
 
 # # Friends
@@ -115,6 +122,4 @@ service-worker: true
 # Code Highlight theme
 # Available value: normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
-
 theme: jekyll-theme-cayman
