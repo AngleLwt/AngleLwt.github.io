@@ -1,11 +1,18 @@
 # Site settings
-title: Jlcao Blog
-SEOTitle: 曹杰乐的博客 | Jlcao Blog
+title:  LWT Angle
+SEOTitle: 李文拓的博客 | LWT Angle
 header-img: img/root/home-bg-fj.jpg
+<<<<<<< HEAD
+email:  angle.lwt@qq.com
+description: "The angel will choose to abandon you for everyone, and the devil will fight against the whole world for you."
+keyword: "LWT, LWT Angle,李文拓的博客, liwentuo, 李文拓, iOS, Apple, iPhone"
+url: "https://caojiele.com"              # your host, for absolute URL
+=======
 email:  caojiele1225@126.com
 description: "关于程序与设计以及架构 | 曹杰乐，Java & Mobile Lover，Software Engineer | 这里是 @caojiele 曹杰乐 的个人博客，与你一起发现更大的世界。"
 keyword: "曹杰乐, Jiele曹杰乐, Jiele, Jack-cao, @caojiele, 曹杰乐的博客, Jlcao Blog, 博客, 个人网站, 互联网, Java, node.js, 后端, 开发"
-url: "https://caojiele.com"              # your host, for absolute URL
+url: "https://liwentuo.top/"              # your host, for absolute URL
+>>>>>>> 5872860f249e31b924922ff502b17173bee1e38c
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,9 +20,10 @@ future: true
 
 # SNS settings
 RSS: true
-zhihu_username:     wang-le-6-62
-github_username:    caojiele
-linkedin_username:  Jack-cao-387159129  
+zhihu_username:     李文拓Angle
+github_username:    AngleLwt
+linkedin_username:
+jianshu_username:   323eca6bb9fe
 #weibo_username:    
 #twitter_username:   
 #facebook_username:  
@@ -96,29 +104,5 @@ page-mathjax: false
 
 # Friends
 friends: [
-    {
-        title: "黄玄的博客",
-        href: "https://huangxuan.me/"
-    },{
-        title: "许雪里的博客",
-        href: "http://www.xuxueli.com/blog/#/"
-    },{
-        title: "小马哥的技术博客",
-        href: "https://mercyblitz.github.io/"
-    },{
-        title: "Ebn's Blog",
-        href: "http://ebnbin.com/"
-    },{
-        title: "SmdCn's Blog",
-        href: "http://blog.smdcn.net"
-    },{
-        title: "David's Game",
-        href: "https://www.ruoyaowu.com/"
-    },{
-        title: "DHong Say",
-        href: "http://dhong.co"
-    },{
-        title: "一之笔的博客",
-        href: "https://yizibi.github.io"
-    }
+   
 ]
