@@ -11,7 +11,7 @@ tags:                               #标签
     - 网络请求
 ---
 
-```
+```java
 public class ImpClickModerl implements MvpInterface.ClickAngleModel {
 
     private Context s;

@@ -27,7 +27,7 @@ tags:                               #标签
 
 2.  Matrix缩放
 
-```
+```java
      /**
      * 缩放图片
      */
@@ -52,7 +52,7 @@ bitmapScale(2f, 3f);
 
 3.  Matrix旋转
 
-```
+```java
 /**
      * 图片旋转
      */
@@ -75,7 +75,7 @@ bitmapRotate(30f);
 
 4.  Matrix位移
 
-```
+```java
 /**
      * 图片移动
      */
@@ -98,7 +98,7 @@ bitmapRotate(30f);
 
 5.  Matrix倾斜
 
-```
+```java
 /**
      * 倾斜图片
      */
@@ -134,7 +134,7 @@ bitmapSkew(1f, 7f);
 
 *   去除红色
 
-```
+```java
 public static void bitmapNoRed(Bitmap mBitmap,ImageView mIvNew){
         Bitmap bitmap = Bitmap.createBitmap(mBitmap.getWidth(), mBitmap.getHeight(), mBitmap.getConfig());
         //去掉红色
@@ -164,7 +164,7 @@ bitmapNoRed(baseBitmap);
 2.  封装的api:
     除了直接设置矩阵的值外，该类还封装了一些API来快速调整矩阵参数，如：通过setRotate（）方法设置色调、setSaturation（）方法设置饱和度、setScale（）方法设置亮度。这些方法使用起来很简单
 
-```
+```java
  // 创建副本，用于将处理过的图片展示出来而不影响原图，Android系统也不允许直接修改原图
         Bitmap bmp = Bitmap.createBitmap(bitmap.getWidth(),bitmap.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bmp);

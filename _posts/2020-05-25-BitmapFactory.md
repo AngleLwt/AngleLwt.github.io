@@ -73,7 +73,7 @@ tags:                               #标签
 
 BitmapFactory.options的实际应用：
 
-```
+```java
         String pathName = "/storage/emulated/0/test1.jpg";
         //width: 263,ImageView实际比较小
         int width = mIv.getWidth();
