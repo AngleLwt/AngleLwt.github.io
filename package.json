@@ -1,14 +1,14 @@
 {
-    "name": "lwt-angel",
-    "title": "LWT Angel",
-    "author": "LWT <angel.lwt@qq.com>",
+    "name": "jlcao-blog",
+    "title": "Jlcao Blog",
+    "author": "Jlcao <caojiele1225@126.com>",
     "version": "1.7.0",
-    "homepage": "https://anglelwt.github.io/",
+    "homepage": "https://caojiele.com",
     "repository": {
         "type": "git",
-        "url": "https://anglelwt.github.io/anglelwt.github.io"
+        "url": "https://github.com/caojiele/caojiele.github.io"
     },
-    "bugs": "https://anglelwt.github.io/anglelwt.github.io/issues",
+    "bugs": "https://github.com/caojiele/caojiele.github.io/issues",
     "devDependencies": {
         "grunt": "~0.4.5",
         "grunt-contrib-less": "~0.11.4",

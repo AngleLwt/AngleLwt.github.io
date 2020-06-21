@@ -1,7 +1,10 @@
 ---
 layout: page
-description: "Thinking will not overcome fear but action will I'm Angel"
+description: "这是最好的时代 也是最坏的时代"
 ---
+
+    <!-- canvas-nest.min.js -->   
+<script type="text/javascript" color="167,198,202" opacity='0.5' zIndex="-2" count="99" src="../../../../js/canvas-nest.min.js"></script>
 
 {% for post in paginator.posts %}
 <div class="post-preview">
@@ -15,7 +18,11 @@ description: "Thinking will not overcome fear but action will I'm Angel"
         </h3>
         {% endif %}
         <div class="post-content-preview">
-            {{ post.content | strip_html | truncate:200 }}
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
         </div>
     </a>
     <p class="post-meta">
