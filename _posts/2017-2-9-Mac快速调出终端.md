@@ -35,7 +35,12 @@ tags:
 修改框内的脚本
 
 ```
-on run {input, parameters}	tell application "Terminal"		reopen		activate	end tellend run
+on run {input, parameters}
+	tell application "Terminal"
+		reopen
+		activate
+	end tell
+end run
 
 ```
 
