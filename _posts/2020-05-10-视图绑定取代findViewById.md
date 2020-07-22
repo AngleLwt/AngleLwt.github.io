@@ -9,7 +9,30 @@ catalog: true                       # 是否归档
 tags:                               #标签
     - Android笔记
 ---
-对比使用findviewById的优点
+
+# ViewBinding
+
+
+## 与 findViewById 的区别
+与使用 findViewById 相比，视图绑定具有一些很显著的优点：
+
+### Null 安全
+由于视图绑定会创建对视图的直接引用，因此不存在因视图 ID 无效而引发 Null 指针异常的风险。此外，如果视图仅出现在布局的某些配置中，则绑定类中包含其引用的字段会使用 @Nullable 标记。
+类型安全：每个绑定类中的字段均具有与它们在 XML 文件中引用的视图相匹配的类型。这意味着不存在发生类转换异常的风险。
+这些差异意味着布局和代码之间的不兼容将会导致构建在编译时（而非运行时）失败。
+
+### 与数据绑定的对比
+视图绑定和数据绑定均会生成可用于直接引用视图的绑定类。但是，视图绑定旨在处理更简单的用例，与数据绑定相比，具有以下优势：
+
+更快的编译速度：视图绑定不需要处理注释，因此编译时间更短。
+易于使用：视图绑定不需要特别标记的 XML 布局文件，因此在应用中采用速度更快。在模块中启用视图绑定后，它会自动应用于该模块的所有布局。
+反过来，与数据绑定相比，视图绑定也具有以下限制：
+
+视图绑定不支持布局变量或布局表达式，因此不能用于直接在 XML 布局文件中声明动态界面内容。
+视图绑定不支持双向数据绑定。
+考虑到这些因素，在某些情况下，最好在项目中同时使用视图绑定和数据绑定。您可以在需要高级功能的布局中使用数据绑定，而在不需要高级功能的布局中使用视图绑定。
+
+## 对比使用findviewById的优点
 1.Null 安全：并没有R.id.tv 但是还要去findviewByid就会崩溃
 2.类型安全：findviewByid一个TextView但是强转成一个imageView就会崩溃
 欲使用此功能，请先保证你的android studio 版本不低于3.6
@@ -34,9 +57,13 @@ android {
 
 
 ```
+
+* Activity
+
 这个类里面就是对里面所有view的映射
 
 没使用视图绑定：
+
 ```
 public class MainActivity extends AppCompatActivity {
  @Override
@@ -49,7 +76,9 @@ public class MainActivity extends AppCompatActivity {
  }
 
 ```
+
 使用了视图绑定:
+
 ```
 public class MainActivity extends AppCompatActivity {
 @Override
@@ -61,10 +90,50 @@ public class MainActivity extends AppCompatActivity {
     }
  }
 ```
+
+* Fragment
+
+```
+    private ResultProfileBinding binding;
+
+    @Override
+    public View onCreateView (LayoutInflater inflater,
+                              ViewGroup container,
+                              Bundle savedInstanceState) {
+        binding = ResultProfileBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+        return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+    
+```
+
+引用
+
+```
+    binding.getName().setText(viewModel.getName());
+    binding.button.setOnClickListener(new View.OnClickListener() {
+        viewModel.userClicked()
+    });
+    
+```
+
 修改gradle配置文件
 `/Applications/Android/Studio.app/Contents/plugins/android/lib/templates/gradle-projects/NewAndroidModule/root/build.gradle.ftl `
 
-谷歌总结:
+# 我将自己写的ViewBinding模版上传至git
+下载地址[GitHub](https://github.com/AngleLwt/Android-Studio-Module)
 
-findViewById 是许多用户可见 bug 的来源: 我们很容易传入一个布局中根本不存在的 id，从而导致空指针异常而崩溃；由于此方法类型不安全，也很容易使人写出像 findViewById<TextView>(R.id.image) 这样的，导致类型转换错误的代码。为了解决这些问题，视图绑定把 findViewById 替换成了更加简洁和安全的实现。
+* EmptyActivity
+* AngelAcitvity
+* MVP
+
+注意：这是studio系统自带模板路径
+
+`/Applications/Android/Studio.app/Contents/plugins/android/lib/templates/activities `
 
