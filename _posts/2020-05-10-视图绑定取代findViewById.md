@@ -33,8 +33,9 @@ tags:                               #标签
 考虑到这些因素，在某些情况下，最好在项目中同时使用视图绑定和数据绑定。您可以在需要高级功能的布局中使用数据绑定，而在不需要高级功能的布局中使用视图绑定。
 
 ## 对比使用findviewById的优点
-1.Null 安全：并没有R.id.tv 但是还要去findviewByid就会崩溃
-2.类型安全：findviewByid一个TextView但是强转成一个imageView就会崩溃
+* 1.Null 安全：并没有R.id.tv 但是还要去findviewByid就会崩
+
+* 2.类型安全：findviewByid一个TextView但是强转成一个imageView就会崩溃
 欲使用此功能，请先保证你的android studio 版本不低于3.6
 build.gradle 文件中配置 viewBinding 选项:
 
