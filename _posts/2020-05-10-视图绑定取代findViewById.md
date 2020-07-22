@@ -39,7 +39,8 @@ tags:                               #标签
 build.gradle 文件中配置 viewBinding 选项:
 
 
-```
+```java
+
 //Android Studio 3.6
 android {
     viewBinding {
@@ -64,7 +65,8 @@ android {
 
 没使用视图绑定：
 
-```
+```java
+
 public class MainActivity extends AppCompatActivity {
  @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
 
 使用了视图绑定:
 
-```
+```java
+
 public class MainActivity extends AppCompatActivity {
 @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,11 +92,13 @@ public class MainActivity extends AppCompatActivity {
         root.text.setText("ok");
     }
  }
+ 
 ```
 
 * Fragment
 
-```
+```java
+
     private ResultProfileBinding binding;
 
     @Override
@@ -115,7 +120,8 @@ public class MainActivity extends AppCompatActivity {
 
 引用
 
-```
+```java
+
     binding.getName().setText(viewModel.getName());
     binding.button.setOnClickListener(new View.OnClickListener() {
         viewModel.userClicked()
