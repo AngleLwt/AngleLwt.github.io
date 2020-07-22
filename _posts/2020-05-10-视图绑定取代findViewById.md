@@ -49,14 +49,12 @@ android {
     }
 }
 
-
 // Android Studio 4.0
 android {
     buildFeatures {
         viewBinding = true
     }
 }
-
 
 ```
 
